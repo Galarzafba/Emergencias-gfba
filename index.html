@@ -5,130 +5,135 @@
     <meta charset="UTF-8">
     <title>Central de Emergencias Ciudadanas</title>
 </head>
-<body>
+<body align="center">
 
     <!-- ENCABEZADO -->
     <header>
-        <img src="LOGO-CENTRAL.jpg" width="120" height="120">
-        
+        <p><img src="LOGO-CENTRAL.jpg" width="120" height="120" alt="Logo Central"></p>
         <h1>Central Nacional de Emergencias</h1>
         <p>Atención y coordinación de auxilio ciudadano las 24 horas del día.</p>
         
         <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#formulario">Reportar Emergencia</a></li>
-                <li><a href="#lineas">Líneas Directas</a></li>
-                <li><a href="#recomendaciones">Qué Hacer</a></li>
-            </ul>
+            <a href="#inicio">Inicio</a> &nbsp;|&nbsp;
+            <a href="#formulario">Reportar Emergencia</a> &nbsp;|&nbsp;
+            <a href="#lineas">Líneas Directas</a> &nbsp;|&nbsp;
+            <a href="#recomendaciones">Qué Hacer</a>
         </nav>
     </header>
 
-    <hr>
+    <hr width="80%">
 
     <main id="inicio">
         
+        <!-- INICIO -->
         <section>
             <h2>Bienvenido al Portal de Auxilio</h2>
-            
-            <img src="ATENCION.jpg" width="300" height="200">
-            
-            <p>En esta plataforma podrá reportar incidentes en tiempo real para que los cuerpos de seguridad y rescate acudan al lugar. Si su vida o la de alguien más corre peligro inmediato, comuníquese telefónicamente.</p>
+            <p><img src="ATENCION.jpg" width="300" height="200" alt="Atención de emergencias"></p>
+            <p>En esta plataforma podrá reportar incidentes en tiempo real para que los cuerpos de seguridad y rescate acudan al lugar.<br>Si su vida o la de alguien más corre peligro inmediato, comuníquese telefónicamente.</p>
         </section>
 
-        <hr>
+        <hr width="80%">
 
+        <!-- FORMULARIO -->
         <section id="formulario">
             <h2>Formulario de Reporte de Emergencia</h2>
             <form action="#" method="post">
-                <fieldset>
-                    <legend><strong>Datos del Incidente</strong></legend>
-
-                    <p>
-                        <label for="nombre">Nombre completo de quien reporta:</label><br>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
-                    </p>
-
-                    <p>
-                        <label for="telefono">Teléfono de contacto:</label><br>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 555-0123">
-                    </p>
-
-                    <p>
-                        <label for="tipo">Tipo de emergencia:</label><br>
-                        <select id="tipo" name="tipo" required>
-                            <option value="">-- Seleccione una opción --</option>
-                            <option value="medica">Emergencia Médica / Ambulancia</option>
-                            <option value="incendio">Incendio / Bomberos</option>
-                            <option value="seguridad">Seguridad Pública / Policía</option>
-                            <option value="rescate">Rescate / Protección Civil</option>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label>Nivel de urgencia:</label><br>
-                        <input type="radio" id="alta" name="urgencia" value="alta" checked> <label for="alta">Alta (Riesgo vital)</label><br>
-                        <input type="radio" id="media" name="urgencia" value="media"> <label for="media">Media</label><br>
-                        <input type="radio" id="baja" name="urgencia" value="baja"> <label for="baja">Baja</label>
-                    </p>
-
-                    <p>
-                        <label for="ubicacion">Ubicación exacta:</label><br>
-                        <input type="text" id="ubicacion" name="ubicacion" required placeholder="Calle, número y colonia">
-                    </p>
-
-                    <p>
-                        <label for="detalles">Descripción breve de la situación:</label><br>
-                        <textarea id="detalles" name="detalles" rows="4" cols="45" required placeholder="Indique si hay heridos, riesgos activos o referencias del lugar..."></textarea>
-                    </p>
-
-                    <p>
-                        <button type="submit">Enviar Reporte de Auxilio</button>
-                        <button type="reset">Limpiar Formulario</button>
-                    </p>
-                </fieldset>
+                <table align="center" border="0">
+                    <tr>
+                        <td align="center">
+                            <fieldset>
+                                <legend align="center"><strong>Datos del Incidente</strong></legend>
+                                <p>
+                                    <label for="nombre">Nombre completo de quien reporta:</label><br>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" size="35">
+                                </p>
+                                <p>
+                                    <label for="telefono">Teléfono de contacto:</label><br>
+                                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 555-0123" size="35">
+                                </p>
+                                <p>
+                                    <label for="tipo">Tipo de emergencia:</label><br>
+                                    <select id="tipo" name="tipo" required>
+                                        <option value="">-- Seleccione una opción --</option>
+                                        <option value="medica">Emergencia Médica / Ambulancia</option>
+                                        <option value="incendio">Incendio / Bomberos</option>
+                                        <option value="seguridad">Seguridad Pública / Policía</option>
+                                        <option value="rescate">Rescate / Protección Civil</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label>Nivel de urgencia:</label><br>
+                                    <input type="radio" id="alta" name="urgencia" value="alta" checked> <label for="alta">Alta</label>
+                                    <input type="radio" id="media" name="urgencia" value="media"> <label for="media">Media</label>
+                                    <input type="radio" id="baja" name="urgencia" value="baja"> <label for="baja">Baja</label>
+                                </p>
+                                <p>
+                                    <label for="ubicacion">Ubicación exacta:</label><br>
+                                    <input type="text" id="ubicacion" name="ubicacion" required placeholder="Calle, número y colonia" size="35">
+                                </p>
+                                <p>
+                                    <label for="detalles">Descripción breve de la situación:</label><br>
+                                    <textarea id="detalles" name="detalles" rows="4" cols="35" required placeholder="Indique si hay heridos, riesgos activos o referencias..."></textarea>
+                                </p>
+                                <p>
+                                    <button type="submit">Enviar Reporte de Auxilio</button>
+                                    <button type="reset">Limpiar Formulario</button>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </section>
 
-        <hr>
+        <hr width="80%">
 
+        <!-- LÍNEAS DIRECTAS -->
         <section id="lineas">
             <h2>Líneas Telefónicas Directas</h2>
             <p>Si no puede completar el formulario, marque directamente a los siguientes números institucionales:</p>
-            <ul>
-                <li><strong>911:</strong> Emergencias Generales y Policía Nacional</li>
-                <li><strong>065:</strong> Cruz Roja (Ambulancias)</li>
-                <li><strong>068:</strong> Cuerpo de Bomberos</li>
-                <li><strong>066:</strong> Protección Civil</li>
-            </ul>
+            <table align="center" border="0">
+                <tr>
+                    <td align="left">
+                        <ul>
+                            <li><strong>911:</strong> Emergencias Generales y Policía Nacional</li>
+                            <li><strong>065:</strong> Cruz Roja (Ambulancias)</li>
+                            <li><strong>068:</strong> Cuerpo de Bomberos</li>
+                            <li><strong>066:</strong> Protección Civil</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
         </section>
 
-        <hr>
+        <hr width="80%">
 
+        <!-- RECOMENDACIONES -->
         <section id="recomendaciones">
             <h2>¿Qué hacer ante una emergencia?</h2>
-            
-            <p>
-                <img src="INFOGRAFIA.jpg" alt="Infografía de primeros auxilios" width="300">
-            </p>
-
-            <ol>
-                <li><strong>Mantenga la calma:</strong> Permanezca en un lugar seguro antes de llamar o enviar este formulario.</li>
-                <li><strong>Proporcione datos claros:</strong> Es vital dar la dirección exacta y referencias cercanas.</li>
-                <li><strong>Siga indicaciones:</strong> No intente mover a heridos graves a menos que haya riesgo de explosión o derrumbe.</li>
-            </ol>
+            <p><img src="INFOGRAFIA.jpg" alt="Infografía de primeros auxilios" width="300"></p>
+            <table align="center" border="0">
+                <tr>
+                    <td align="left">
+                        <ol>
+                            <li><strong>Mantenga la calma:</strong> Permanezca en un lugar seguro antes de llamar o enviar este formulario.</li>
+                            <li><strong>Proporcione datos claros:</strong> Es vital dar la dirección exacta y referencias cercanas.</li>
+                            <li><strong>Siga indicaciones:</strong> No intente mover a heridos graves a menos que haya riesgo de explosión.</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
         </section>
 
     </main>
 
-    <hr>
+    <hr width="80%">
 
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <img src="ESCUDO.jpg" width="120">
-
-        <p><strong>Sistema Nacional de Atención a Emergencias</strong></p>
+        <p><img src="ESCUDO.jpg" width="120" alt="Escudo Institucional"></p>
+        <p><strong>ALUMNO:Galarza Flores Brian Antonio</strong></p>
         <p>Servicio gratuito disponible los 365 días del año.</p>
-        <p><small>&copy; 2026 Portal de Emergencias. Todos los derechos reservados. Desarrollado en HTML puro.</small></p>
     </footer>
 
 </body>
